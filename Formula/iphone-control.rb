@@ -2,13 +2,14 @@
 class IphoneControl < Formula
   desc "Let AI agents operate a real iPhone or iPad over USB (MCP server and daemon)"
   homepage "https://github.com/Derrors/iphone-control"
-  version "0.1.5"
   license "MIT"
 
   on_macos do
     depends_on arch: :arm64
-    url "https://github.com/Derrors/iphone-control/releases/download/v0.1.5/iphone-control-v0.1.5-macos-arm64.tar.gz"
-    sha256 "216e3a9b7ed24c4b8becd04e481acd13ee123eee133825fcc65d1e5225d01c13"
+    on_arm do
+      url "https://github.com/Derrors/iphone-control/releases/download/v0.1.5/iphone-control-v0.1.5-macos-arm64.tar.gz"
+      sha256 "216e3a9b7ed24c4b8becd04e481acd13ee123eee133825fcc65d1e5225d01c13"
+    end
   end
 
   on_linux do
